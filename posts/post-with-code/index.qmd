@@ -5,7 +5,6 @@ date: "2025-01-17"
 categories: [Data Pipeline, ETL, Google Cloud]
 image: "image.jpg"
 ---
-![](background.jpg)
 
 ### Introduction
 
@@ -32,7 +31,7 @@ Once the data is pipelined into BigQuery, data analysts and business analysts ca
 
 BigQuery provides native support for pipelines. Users can create a table that links to an external Google Sheet by providing the URL and sheet range. You can refer to the [official documentation](https://cloud.google.com/bigquery/docs/external-data-drive#create_external_tables) for more details. The data syncs takes place in real time- whenever the Google Sheet is updated, the BigQuery table is automatically updated.
 
-![Users can create a table that links to an external Google Sheet by providing the URL and sheet range](create_external_table.jpg)
+![Users can create a table that links to an external Google Sheet by providing the URL and sheet range. Screenshot from Google BigQuery Console](create_external_table.jpg)
 
 While this method is easy to set up, it has several limitations
 
@@ -53,7 +52,7 @@ These cases can have severe consequences. If the table is corrupted, all depende
 
 Adding Python as a middle layer can address these limitations. The Python middle layer involves three main components
 
-![3 main components in the data pipeline](flow.jpg)
+![3 main components in the data pipeline. Image by Author](flow.jpg)
 
 1. **Read Data from Google Sheets and Load It as a Pandas DataFrame**
    - There are multiple approaches to reading data from a Google Sheet for data engineers. Below is a simple function that loads data as a Pandas DataFrame given the URL of an unlisted Google Sheet. *Unlisted* means that anyone with the link can view the data. 
